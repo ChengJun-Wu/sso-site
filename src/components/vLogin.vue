@@ -36,6 +36,9 @@ export default {
       loading: false
     }
   },
+  mounted () {
+    this.logout()
+  },
   methods: {
     login () {
       this.loading = true
@@ -46,6 +49,9 @@ export default {
       }).finally(() => {
         this.loading = false
       })
+    },
+    logout () {
+      api({}).delete(this.loginUrl)
     }
   }
 }

@@ -1,16 +1,26 @@
 export default [
   {
-    route: '/backend/index',
-    name: 'mission',
-    icon: 'home',
-    desc: '服务器和脚本管理工具',
-    show: false
+    icon: 'ios-people',
+    name: '用户',
+    children: [
+      {
+        name: '用户',
+        path: '/backend/user'
+      }
+    ]
   },
   {
-    route: '/backend/server',
-    name: '服务器',
-    icon: 'desktop',
-    desc: '执行脚本的服务器',
-    show: true
+    icon: 'ios-key',
+    name: '权限',
+    children: [
+      {
+        name: '权限',
+        path: '/backend/auth'
+      },
+      {
+        name: '路由',
+        path: '/backend/route'
+      }
+    ]
   }
 ]

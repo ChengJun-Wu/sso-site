@@ -20,6 +20,18 @@ const routes = [
       {
         path: 'index',
         component: () => import('@/views/backend/Index')
+      },
+      {
+        path: 'route',
+        component: () => import('@/views/backend/Route')
+      },
+      {
+        path: 'auth',
+        component: () => import('@/views/backend/Auth')
+      },
+      {
+        path: 'user',
+        component: () => import('@/views/backend/User')
       }
     ]
   }
