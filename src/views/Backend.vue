@@ -17,13 +17,10 @@
       <Layout>
         <Sider hide-trigger :style="{background: '#fff', height: '100vh'}">
           <Menu :active-name="$route.path" theme="light" width="auto" :open-names="menuOpenNames">
-            <Submenu v-for="menu in menus" :key="menu.name" :name="menu.name">
-              <template slot="title">
-                <Icon :type="menu.icon"></Icon>
-                {{menu.name}}
-              </template>
-              <MenuItem v-for="item in menu.children" :key="item.path" :to="item.path" :name="item.path">{{ item.name }}</MenuItem>
-            </Submenu>
+            <MenuItem v-for="menu in menus" :key="menu.path" :to="menu.path" :name="menu.path">
+              <Icon :type="menu.icon" />
+              <span>{{ menu.name }}</span>
+            </MenuItem>
           </Menu>
         </Sider>
         <Layout :style="{padding: '14px'}">

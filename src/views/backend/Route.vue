@@ -71,7 +71,7 @@ export default {
           align: 'center'
         },
         {
-          title: '使用中',
+          title: '状态',
           slot: 'Enable',
           align: 'center'
         },
