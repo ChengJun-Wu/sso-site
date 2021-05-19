@@ -23,14 +23,14 @@ import { Input, Button } from 'view-design'
 export default {
   name: 'vLogin',
   props: {
-    loginUrl: String,
+    loginUrl: String
   },
   components: { Input, Button },
   data () {
     return {
       form: {
         username: '',
-        password: '',
+        password: ''
       },
       captchaImage: '',
       loading: false
